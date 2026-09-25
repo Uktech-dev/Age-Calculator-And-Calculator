@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Smart Calculator & Age Calculator</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="header">
+
+        <div class="logo">
+            🧮
+        </div>
+
+        <div>
+            <h1>Smart Calculator</h1>
+            <p>& Age Calculator</p>
+        </div>
+
+    </header>
+
+
+    <!-- MAIN -->
+
+    <main>
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <h2>Choose a Calculator</h2>
+
+            <p>
+                Select the calculator you want to use.
+            </p>
+
+        </section>
+
+
+        <!-- CALCULATOR OPTIONS -->
+
+        <section class="calculator-options">
+
+            <button
+                class="calculator-card"
+                id="ageCalculatorBtn"
+                type="button"
+            >
+
+                <div class="card-icon">
+                    🎂
+                </div>
+
+                <div class="card-text">
+
+                    <h3>
+                        Age Calculator
+                    </h3>
+
+                    <p>
+                        Calculate your age between two years.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    ›
+                </span>
+
+            </button>
+
+
+            <button
+                class="calculator-card"
+                id="scientificCalculatorBtn"
+                type="button"
+            >
+
+                <div class="card-icon">
+                    🧮
+                </div>
+
+                <div class="card-text">
+
+                    <h3>
+                        Scientific Calculator
+                    </h3>
+
+                    <p>
+                        Perform basic and advanced calculations.
+                    </p>
+
+                </div>
+
+                <span class="arrow">
+                    ›
+                </span>
+
+            </button>
+
+        </section>
+
+
+        <!-- AGE CALCULATOR -->
+
+        <section
+            class="age-calculator"
+            id="ageCalculator"
+        >
+
+            <h2>
+                🎂 Age Calculator
+            </h2>
+
+            <p class="age-intro">
+                Enter a year manually or select a date using the calendar.
+            </p>
+
+
+            <!-- FROM -->
+
+            <div class="date-field">
+
+                <label for="fromDate">
+                    From
+                </label>
+
+                <div class="date-input-box">
+
+                    <input
+                        type="text"
+                        id="fromDate"
+                        placeholder="e.g. 1974"
+                        inputmode="numeric"
+                        maxlength="4"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="calendar-btn"
+                        id="fromCalendarBtn"
+                        aria-label="Choose From date"
+                    >
+                        📅 Choose Date
+                    </button>
+
+                </div>
+
+                <!-- Native calendar -->
+
+                <input
+                    type="date"
+                    id="fromCalendar"
+                    class="hidden-calendar"
+                    tabindex="-1"
+                >
+
+            </div>
+
+
+            <!-- TO -->
+
+            <div class="date-field">
+
+                <label for="toDate">
+                    To
+                </label>
+
+                <div class="date-input-box">
+
+                    <input
+                        type="text"
+                        id="toDate"
+                        placeholder="e.g. 2003"
+                        inputmode="numeric"
+                        maxlength="4"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="calendar-btn"
+                        id="toCalendarBtn"
+                        aria-label="Choose To date"
+                    >
+                        📅 Choose Date
+                    </button>
+
+                </div>
+
+                <!-- Native calendar -->
+
+                <input
+                    type="date"
+                    id="toCalendar"
+                    class="hidden-calendar"
+                    tabindex="-1"
+                >
+
+            </div>
+
+
+            <!-- CALCULATE -->
+
+            <button
+                id="calculateAgeBtn"
+                class="calculate-btn"
+                type="button"
+            >
+                Calculate Age
+            </button>
+
+
+            <!-- RESULT -->
+
+            <div
+                id="ageResult"
+                class="age-result"
+            >
+
+                <h3>
+                    Result
+                </h3>
+
+                <div
+                    id="ageNumber"
+                    class="age-number"
+                >
+                    0
+                    <span>
+                        Years
+                    </span>
+                </div>
+
+                <p id="ageDetails">
+                    Enter your From and To values.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- SCIENTIFIC CALCULATOR -->
+
+        <section
+            class="scientific-calculator"
+            id="scientificCalculator"
+        >
+
+            <h2>
+                🧮 Scientific Calculator
+            </h2>
+
+
+            <!-- DISPLAY -->
+
+            <div class="calculator-display">
+
+                <div
+                    class="calculator-question"
+                    id="calculatorQuestion"
+                >
+                    0
+                </div>
+
+                <div
+                    class="calculator-answer"
+                    id="calculatorAnswer"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- BUTTONS -->
+
+            <div class="calculator-buttons">
+
+                <button type="button">AC</button>
+
+                <button type="button">DEL</button>
+
+                <button type="button">÷</button>
+
+                <button type="button">×</button>
+
+
+                <button type="button">7</button>
+
+                <button type="button">8</button>
+
+                <button type="button">9</button>
+
+                <button type="button">−</button>
+
+
+                <button type="button">4</button>
+
+                <button type="button">5</button>
+
+                <button type="button">6</button>
+
+                <button type="button">+</button>
+
+
+                <button type="button">1</button>
+
+                <button type="button">2</button>
+
+                <button type="button">3</button>
+
+                <button type="button">=</button>
+
+
+                <button type="button">0</button>
+
+                <button type="button">.</button>
+
+                <button type="button">π</button>
+
+                <button type="button">√</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ADVERTISEMENT -->
+
+        <div class="ad-box">
+            Advertisement
+        </div>
+
+    </main>
+
+
+    <!-- BOTTOM NAVIGATION -->
+
+    <nav class="bottom-nav">
+
+        <a
+            href="#"
+            class="active"
+        >
+            🏠
+            <span>
+                Home
+            </span>
+        </a>
+
+
+        <a href="#ageCalculator">
+
+            🎂
+
+            <span>
+                Age
+            </span>
+
+        </a>
+
+
+        <a href="#scientificCalculator">
+
+            🧮
+
+            <span>
+                Calculator
+            </span>
+
+        </a>
+
+    </nav>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
